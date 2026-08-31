@@ -26,7 +26,7 @@ helper functions by relative file name.
 - `generate_*.m`, `load_CDL.m`, `BM_gain.m`, `Gain_BM.m`, and
   `Gain_per_element.m` provide common channel and antenna helpers.
 - `results/` holds saved figures and selected numerical outputs from past runs.
-- `backup/` contains historical copies; it is retained for traceability and is
+- `archive/` contains historical copies; it is retained for traceability and is
   not an active source directory.
 
 ## Running a small sanity check
@@ -35,10 +35,9 @@ For a first run, use a self-contained script such as `test3.m`, reduce
 `n_train` and `n_test` near the top of the file, then run:
 
 ```matlab
-cd('path/to/GAMP/BM_code')
+cd('path/to/GAMP/experiments/beamforming')
 run('test3.m')
 ```
 
 Do not overwrite files in `results/` until the output naming convention has
 been consolidated.
-

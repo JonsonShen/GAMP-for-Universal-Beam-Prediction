@@ -2,10 +2,11 @@
 
 MATLAB research code for two related simulation tracks:
 
-- **GAMP mismatch experiments** at the repository root: generalized approximate
+- **GAMP mismatch experiments** in [`experiments/gamp`](experiments/gamp/): generalized approximate
   message passing (GAMP) under additive white Gaussian noise (AWGN) and
   additive white Laplacian noise (AWLN).
-- **Beamforming and channel-prediction experiments** in [`BM_code`](BM_code/):
+- **Beamforming and channel-prediction experiments** in
+  [`experiments/beamforming`](experiments/beamforming/):
   3GPP CDL-channel beamforming simulations and GAMP/LMMSE-style baselines.
 
 The code has been preserved as imported.  In particular, the scripts retain
@@ -25,12 +26,12 @@ Open MATLAB and change into the experiment folder before running a script.
 
 ```matlab
 % GAMP mismatch-rate sweeps
-cd('path/to/GAMP')
+cd('path/to/GAMP/experiments/gamp')
 run('GAMP_AWGN_SNR.m')
 run('GAMP_AWLN_SNR.m')
 
 % Beamforming / channel-prediction experiments
-cd('path/to/GAMP/BM_code')
+cd('path/to/GAMP/experiments/beamforming')
 run('GAMP.m')
 ```
 
@@ -42,14 +43,15 @@ Several sweeps intentionally use large trial counts, so begin with smaller
 
 ```text
 .
-├── GAMP_AWGN*.m, GAMP_AWLN*.m  # Root GAMP experiments and parameter sweeps
-├── *.png                       # Figures produced by root experiments
-├── *.pptx                      # Group-meeting presentations
-└── BM_code/                    # Beamforming and CDL-channel research code
-    ├── README.md               # BM_code guide and experiment entry points
-    ├── CDL_*.csv               # Channel model inputs
-    ├── results/                # Saved figures and numerical outputs
-    └── backup/                 # Historical script copies
+├── docs/presentations/         # Group-meeting presentations
+├── experiments/
+│   ├── gamp/                   # GAMP mismatch experiments and parameter sweeps
+│   └── beamforming/            # Beamforming and CDL-channel research code
+│       ├── README.md           # Beamforming guide and experiment entry points
+│       ├── CDL_*.csv           # Channel model inputs
+│       ├── results/            # Saved figures and numerical outputs
+│       └── archive/            # Historical script copies
+└── results/gamp/               # Figures produced by GAMP experiments
 ```
 
 ## Notes on version control
