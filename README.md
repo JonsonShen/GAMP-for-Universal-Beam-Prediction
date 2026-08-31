@@ -59,4 +59,3 @@ Saved results that are already in the repository remain versioned so the
 current research record is preserved. Future cleanup can separate reproducible
 source code from regenerated outputs once the desired canonical experiments
 are identified.
-
