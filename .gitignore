@@ -1,0 +1,5 @@
+# macOS Finder metadata
+.DS_Store
+
+# MATLAB editor recovery files
+*.asv
